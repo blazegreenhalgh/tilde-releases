@@ -6,6 +6,12 @@
   <em>A modern, native file manager built for macOS.</em>
 </p>
 
+<p align="center">
+  <a href="https://github.com/blazegreenhalgh/wayfinder-releases/releases/latest">
+    <img src="https://img.shields.io/static/v1?label=&amp;message=Download%20latest%20release&amp;color=111111&amp;style=for-the-badge&amp;logo=apple&amp;logoColor=white" alt="Download latest release">
+  </a>
+</p>
+
 Wayfinder turns everyday file browsing into a flexible workspace. It works
 directly with the files and folders already on your Mac—there is no library to
 import, proprietary file format, or new system to maintain.
