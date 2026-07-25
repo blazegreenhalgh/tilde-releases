@@ -1,63 +1,52 @@
-# Wayfinder Releases
+<p align="center">
+  <img src="docs/assets/wayfinder-cover.png" alt="Wayfinder" width="100%">
+</p>
 
-This repository hosts the official public releases and automatic-update feed for **Wayfinder**, a modern file explorer for macOS.
+<p align="center">
+  <em>A modern, native file manager built for macOS.</em>
+</p>
 
-Wayfinder’s application source code is maintained separately. This repository contains only compiled release files, update metadata, and release notes.
+Wayfinder turns everyday file browsing into a flexible workspace. It works
+directly with the files and folders already on your Mac—there is no library to
+import, proprietary file format, or new system to maintain.
 
-## Download Wayfinder
+## A workspace for your files
 
-[Download the latest release](../../releases/latest)
+- Organize locations into sidebar spaces, folder groups, and live collections.
+- Open folders in tabs, split panes, or separate windows.
+- Keep multiple views of the same folder, each with its own sorting, grouping,
+  filtering, and visible properties.
+- Connect related folders and useful URLs to the places where you need them.
+- Restore your windows, tabs, panes, and navigation history between sessions.
 
-Current system requirements:
+## Familiar navigation, with more control
 
-- macOS 26 or later
-- Apple Silicon Mac
+- Browse in a detailed file list or Finder-style column view.
+- Move quickly with breadcrumbs and back-and-forward history.
+- Search files and folders without leaving the current workspace.
+- Use the command palette to jump to locations and run file actions from the
+  keyboard.
+- Navigate, select, rename, drag, and drop using native macOS interactions.
 
-## Installation
+## See more without breaking your flow
 
-1. Download the latest `Wayfinder.dmg`.
-2. Open the downloaded disk image.
-3. Drag **Wayfinder** into your Applications folder.
-4. Open Wayfinder from Applications.
+- Preview files with Quick Look.
+- Inspect file metadata in a flexible side, bottom, or inline panel.
+- Read and edit Markdown alongside the files it belongs to.
+- Add custom properties to files and use them when sorting, grouping, or
+  filtering a view.
+- Keep temporary files close at hand with the shelf and Downloads tray.
 
-Wayfinder is signed with an Apple Developer ID certificate and notarized by Apple.
+## Built-in file tools
 
-## Automatic updates
+- Create, rename, copy, move, duplicate, and trash files and folders.
+- Undo supported file operations when the original paths remain available.
+- Convert images between WebP, PNG, and JPEG.
+- Resize and flip images without leaving the file manager.
+- Work with local and iCloud Drive folders through the same interface.
 
-Wayfinder uses [Sparkle](https://sparkle-project.org/) to check for and install updates securely.
+## Native by design
 
-After installing Wayfinder, you can manually check for updates from:
-
-**Wayfinder → Check for Updates…**
-
-Updates are verified using both Apple code signing and a dedicated Sparkle EdDSA signing key before installation.
-
-## Release files
-
-This repository may contain:
-
-- Signed and notarized Wayfinder disk images
-- `appcast.xml`, used by Sparkle
-- Release notes
-- Sparkle delta updates
-
-Do not download files from unofficial mirrors or third-party websites.
-
-## Support
-
-If you encounter a problem, please open an issue in this repository and include:
-
-- Your macOS version
-- Your Wayfinder version
-- What you were doing when the problem occurred
-- Any relevant screenshots or error messages
-
-Please do not include passwords, private files, API keys, or other sensitive information.
-
-## Security
-
-If you believe you have found a security issue, please do not disclose it in a public issue. Contact the developer privately instead.
-
----
-
-Copyright © 2026 Blaze Greenhalgh Stewart. All rights reserved.
+Wayfinder is written in Swift with SwiftUI and AppKit. It is designed around
+macOS conventions, system services, native keyboard control, Quick Look, and
+the normal filesystem—so it feels at home on the Mac.
