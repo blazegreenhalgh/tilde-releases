@@ -3,6 +3,69 @@
     <channel>
         <title>Wayfinder</title>
         <item>
+            <title>0.2.0</title>
+            <pubDate>Fri, 31 Jul 2026 15:25:34 +0300</pubDate>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>0.2.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Wayfinder 0.2.0
+
+The release adds independent tabs in every pane, recursive splits, direct manipulation across tabs and the sidebar, deeper macOS integration, and a substantial round of navigation, performance, and reliability improvements.
+
+## A new tabbed, multi-pane workspace
+
+- Panes can be split repeatedly to the right or downward instead of being limited to a single dual-pane layout.
+- Tabs can be reordered live, moved between panes, or dropped on a pane edge to create a new split.
+- Tabs now open and close significantly faster
+- Reordering tabs is much more polished than before.
+
+## Better macOS and Finder integration
+
+- Wayfinder can now be enabled as the default folder viewer for supported Open, Reveal, and Show requests, with controls to enable, repair, or restore the previous handler.
+- Folders and files opened from Finder or another app are routed into Wayfinder's existing windows and panes.
+
+## More capable sidebar drag and drop
+
+- Sidebar folders can be dragged directly into the main window to create a split pane.
+- Pinned folders can now be reordered within a group or moved between groups.
+- Sidebar defaults and migrations have been tightened, including removal of only the legacy seeded Projects shortcut while preserving personal folders with the same name.
+
+## Column view, selection, and Inspector improvements
+
+- Column widths are now saved per directory.
+- An optional “Right-size columns to contents” setting automatically fits columns until a manual width is chosen.
+- Column view should behave more 'Finder-like' with it's logic for horizontally scrolling.
+- A new Preview preference controls whether a single selected folder opens the preview panel; files and multi-item summaries continue to open it automatically.
+- Folder navigation, selection restoration, and cached column state are more consistent when moving backward, forward, or between tabs.
+- Empty areas in column view now expose the appropriate New File and New Folder actions.
+- Renaming flow now consistently works as expected.
+
+## Safer file operations and native interaction
+
+- Copy and move replacements now use a transactional operation path that can undo and redo both the incoming item and the displaced destination.
+- Failed or cancelled multi-item copy, move, trash, and restore operations roll back completed work where possible and report partial state when a rollback itself fails.
+- Drag-and-drop now detects existing destinations and duplicate incoming names before committing the transfer.
+- Inline rename, copy, paste, cloud-status controls, and embedded column controls now claim keyboard and mouse focus without changing selection unexpectedly.
+- File-list and column-view commands now remain attached to the pane where the interaction began.
+
+## Settings, appearance, and smaller refinements
+
+- Added General settings for default-folder-viewer integration and choosing how externally opened folders are routed.
+- Added the column auto-sizing preference and renamed workspace restoration to “Restore tabs and panes on launch” to reflect the expanded behavior.
+- Added an option to show or hide the current folder title beside the file-view tabs.
+- Added a brand-blue sidebar selection style and separate Light and Dark appearance colors for the Related sidebar.
+- Popovers, menus, filter/sort editors, and settings surfaces have refreshed spacing, borders, backgrounds, and presentation behavior.
+- The sidebar eject control, inactive tabs, pane toolbars, dividers, selection colors, and narrow-window Inspector layout received visual polish.
+- Double-clicking the titlebar now respects the macOS preference to minimize, zoom, or take no action.
+- WebP conversion now matches `cwebp`'s default encoding behavior more closely.
+]]></description>
+            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.2.0/Wayfinder-0.2.0.dmg" length="9740240" type="application/octet-stream" sparkle:edSignature="Vmzs+cZLumCI2BDmAg52GkaoaGJRFiSpZ7iUpmCe1VBwg9OhCSA+oWSN4oGUZC6nSrbrmoT9wnKcIDI1yq7zAg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.2.0/Wayfinder2-1.delta" sparkle:deltaFrom="1" length="2256914" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="tfEFSzi3OunFbLNPxJx0Ld683jp0Rylfs2/rkX5C7LF4E5N5bFOm8J6bE36eMHrE9rfjBoTgoDHZ02kgB/nUCQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.1.0</title>
             <pubDate>Sat, 25 Jul 2026 16:47:40 +0300</pubDate>
             <sparkle:version>1</sparkle:version>
@@ -11,7 +74,7 @@
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[Initial public release of Wayfinder.
 ]]></description>
-            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.1.0/Wayfinder-0.1.0.dmg" length="9168078" type="application/octet-stream" sparkle:edSignature="FAB0frO7yhqimaZocpyIJ89OIIpEuqfCC2WmgbEVVIEa+FmsxPVnNoqJWNt4vgbypjaAnJtivu7KtvgWrcUtAw=="/>
+            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.2.0/Wayfinder-0.1.0.dmg" length="9168078" type="application/octet-stream" sparkle:edSignature="FAB0frO7yhqimaZocpyIJ89OIIpEuqfCC2WmgbEVVIEa+FmsxPVnNoqJWNt4vgbypjaAnJtivu7KtvgWrcUtAw=="/>
         </item>
     </channel>
 </rss>
