@@ -3,6 +3,61 @@
     <channel>
         <title>Wayfinder</title>
         <item>
+            <title>0.3.0</title>
+            <pubDate>Thu, 06 Aug 2026 20:50:28 +0300</pubDate>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Wayfinder 0.3.0
+
+This release makes folders more personal and useful with folder-specific pins, properties, recent history, and related items. It also adds source-code previews and hidden-file support, alongside a substantial round of navigation, drag-and-drop, persistence, and visual improvements.
+
+## A richer home for every folder
+
+- Pin important files and folders inside a folder for quick access without moving or duplicating them.
+- Pinned items appear above the regular column contents and can be added from the file menu, by dragging, or with the Command Palette.
+- The folder Info panel now brings together custom properties and recent activity, and stays closed by default until you need it.
+- Related folders and URLs now sit alongside file-view tabs, making connected locations easier to reach without taking up a separate sidebar.
+- A consolidated Add menu keeps new files, new folders, file views, related folders, and related URLs in one predictable place.
+
+## Source previews and hidden files
+
+- The Inspector can now show fast, read-only previews with syntax highlighting for many common source-code and configuration formats.
+- Added preview support for Swift, JavaScript, TypeScript, TSX, JSX, Python, Rust, HTML, CSS, JSON, YAML, Astro, shell scripts, `.env`, `.gitignore`, and more.
+- Code previews follow the current Light or Dark appearance and clearly explain when a file is too large, unavailable, or cannot be previewed safely.
+- A new Appearance setting lets you show hidden files and folders throughout file views and search.
+
+## Better file views and properties
+
+- File views, their layouts, custom properties, and folder-specific pins now save more consistently across tabs, panes, and app launches.
+- Existing setups are carried forward automatically into the new file-view system.
+- Files now have clearer hover states and a quick-access three-dot menu for pinning items and adding or changing their properties.
+- Custom properties are easier to see and edit directly from column-view rows, with clearer colored badges and compact overflow handling.
+- Folder titles, file-view tabs, and related items have been streamlined into a cleaner, more consistent toolbar.
+
+## Smoother navigation and drag and drop
+
+- Dragging over a folder can now open it automatically, making deeper drop destinations much easier to reach.
+- The Shelf now expands and collapses more smoothly, has clearer hover feedback, and no longer interferes with ordinary folder drags or keyboard focus.
+- Newly pasted or added files receive clearer arrival feedback and selection changes feel more natural.
+- After deleting files with the keyboard, Wayfinder keeps your place by selecting the most useful nearby item.
+- Sidebar spaces remain stable while resizing, without jumping between pages.
+
+## Fixes and polish
+
+- Improved inline renaming, including more reliable focus and filename selection for newly created items.
+- Fixed several cases where folder state, selection, navigation, or property changes could be lost or applied to the wrong view.
+- Improved tab and pane presentation, including clearer active-pane styling and more reliable switching between previously opened tabs.
+- Refined popovers, row actions, pinned indicators, dividers, spacing, and selection animations across the app.
+]]></description>
+            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.3.0/Wayfinder-0.3.0.dmg" length="10375287" type="application/octet-stream" sparkle:edSignature="Umps/arkQkMU950kdlzPqdSvCfgW8nKpXGSYqw7yAnNnQuM2qnCKhnOn70shPoqYB2aQjtNq0zsZeJNzc4iWBg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.3.0/Wayfinder3-2.delta" sparkle:deltaFrom="2" length="2573886" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Z9xeVCNTYAoGS+g2OhP2DNFeVnRq+l+gp4PCSvPI3zaUp6uNH1vMLkp0giG9vp5+AJ2KGyE4A9v0IBaQa0vTAA=="/>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.3.0/Wayfinder3-1.delta" sparkle:deltaFrom="1" length="3350258" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="d0QXUamV9va1+32CeaEuZo+bWfqAMzYpzOb81oHGL2J7v5ZYK1e/kUKiiRE/ofL/LNWAV5UhC8EDPYSaPHZICQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.2.0</title>
             <pubDate>Fri, 31 Jul 2026 15:25:34 +0300</pubDate>
             <sparkle:version>2</sparkle:version>
@@ -60,7 +115,7 @@ The release adds independent tabs in every pane, recursive splits, direct manipu
 - Double-clicking the titlebar now respects the macOS preference to minimize, zoom, or take no action.
 - WebP conversion now matches `cwebp`'s default encoding behavior more closely.
 ]]></description>
-            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.2.0/Wayfinder-0.2.0.dmg" length="9740240" type="application/octet-stream" sparkle:edSignature="Vmzs+cZLumCI2BDmAg52GkaoaGJRFiSpZ7iUpmCe1VBwg9OhCSA+oWSN4oGUZC6nSrbrmoT9wnKcIDI1yq7zAg=="/>
+            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.3.0/Wayfinder-0.2.0.dmg" length="9740240" type="application/octet-stream" sparkle:edSignature="Vmzs+cZLumCI2BDmAg52GkaoaGJRFiSpZ7iUpmCe1VBwg9OhCSA+oWSN4oGUZC6nSrbrmoT9wnKcIDI1yq7zAg=="/>
             <sparkle:deltas>
                 <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.2.0/Wayfinder2-1.delta" sparkle:deltaFrom="1" length="2256914" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="tfEFSzi3OunFbLNPxJx0Ld683jp0Rylfs2/rkX5C7LF4E5N5bFOm8J6bE36eMHrE9rfjBoTgoDHZ02kgB/nUCQ=="/>
             </sparkle:deltas>
@@ -74,7 +129,7 @@ The release adds independent tabs in every pane, recursive splits, direct manipu
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[Initial public release of Wayfinder.
 ]]></description>
-            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.2.0/Wayfinder-0.1.0.dmg" length="9168078" type="application/octet-stream" sparkle:edSignature="FAB0frO7yhqimaZocpyIJ89OIIpEuqfCC2WmgbEVVIEa+FmsxPVnNoqJWNt4vgbypjaAnJtivu7KtvgWrcUtAw=="/>
+            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.3.0/Wayfinder-0.1.0.dmg" length="9168078" type="application/octet-stream" sparkle:edSignature="FAB0frO7yhqimaZocpyIJ89OIIpEuqfCC2WmgbEVVIEa+FmsxPVnNoqJWNt4vgbypjaAnJtivu7KtvgWrcUtAw=="/>
         </item>
     </channel>
 </rss>
