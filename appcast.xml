@@ -3,6 +3,91 @@
     <channel>
         <title>Wayfinder</title>
         <item>
+            <title>0.4.1</title>
+            <pubDate>Fri, 14 Aug 2026 23:22:17 +0300</pubDate>
+            <sparkle:version>5</sparkle:version>
+            <sparkle:shortVersionString>0.4.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Wayfinder 0.4.1
+
+This release includes everything introduced in Wayfinder 0.4.0, plus:
+
+- Support for earlier macOS versions.
+- Fixed an issue where internal developer settings were visible in public builds.
+- Corrected developer settings that were configured incorrectly.
+
+# Wayfinder 0.4.0
+
+Wayfinder 0.4.0 is a substantial update focused on making everyday file work feel faster, more personal, and more dependable. It introduces local nicknames, bulk rename, a cleaner way to manage file views, richer native file actions, and clearer cloud-download feedback.
+
+Underneath those features is a broad performance and stability overhaul. Search, folder loading, resizing, drag and drop, filesystem updates, and multi-window persistence now do less unnecessary work while preserving the state that matters: your location, selection, layout, and folder relationships.
+
+### Nicknames: Familiar names, unchanged files
+
+Files and folders can now have local nicknames in Wayfinder. A nickname changes how an item is presented without changing its real name on disk, so a folder such as `Internal-ID-314` can simply appear as “Client Work” inside the app.
+
+The original name remains easy to inspect, and nicknames follow items when they are renamed or moved—even when an entire folder tree moves. Copies keep their real filesystem identity rather than inheriting Wayfinder-only metadata from the source.
+
+Related folders are more durable too. Wayfinder now stores bookmark-backed folder identity, allowing relationships to recover when a folder is moved in Finder or by a File Provider. If a relationship cannot be resolved automatically, a new **Locate** action lets you reconnect it without rebuilding the relationship from scratch.
+
+### Multi-file enhancements: More capable everyday file work
+
+Multi-selection workflows have been expanded with **Rename Multiple Items** and **New Folder with Selection**. Bulk rename can replace text, add text before or after a name, or apply indexed, numbered, and dated formats. A live example shows the intended result, while validation prevents duplicate, nested, or otherwise unsafe rename plans before anything changes on disk.
+
+### UI Changes: Polish that feels native
+
+File views now live in a compact selector rather than occupying a second tab strip. The selector keeps switching lightweight while still letting you create, duplicate, rename, reorder, and remove views. Each view continues to preserve its own filters, sorting, grouping, columns, and widths, and Column Browser layouts can now be saved per folder.
+
+File menus are more complete and more consistent across list and column views. Common actions—including **Open With**, **Share**, **Pin to Sidebar**, **Copy Path**, and **Reveal in Finder**—now appear in a predictable native order. Nickname editors open beside the row they belong to, and the Inspector has clearer quick actions for single and multiple selections.
+
+Wayfinder can now ask Finder to complete supported create, copy, move, rename, and removal operations when macOS protects the destination. If a volume does not provide a Trash, Wayfinder can instead offer a clearly explained, explicitly confirmed permanent deletion.
+
+Cloud-backed items have clearer status throughout the app. Files that are not yet local expose a direct download control, active iCloud downloads show percentage progress, and folder actions can materialize their immediate contents as one tracked operation rather than a collection of disconnected transfers.
+
+Across the rest of the interface, popovers now resize with their content and share consistent spacing, file menus match between views, Settings commands are back in their expected native location, and the folder emoji picker has clearer sections, hover feedback, accessibility labels, and a reset action. Appearance settings cover the default file-view mode and toolbar folder titles, while focused-pane accents, full pane outlines, and the Sidebar's 8% white material overlay are now standard app styling.
+
+Wayfinder 0.4.0 also introduces a refreshed app icon and improves process-level saving so multi-window state is coordinated reliably when the app moves into the background or quits.
+
+### Command Palette 2.0: Faster search, browsing, and file operations
+
+The Command Palette has been rebuilt around persistent indexed search, prepared folder snapshots, cancellable queries, and a virtualized native results list. It stays warm between uses, responds to the first character sooner, and avoids letting an outdated search continue competing with what you are typing now. Searching within the current folder uses the same index and keeps results in the existing column view instead of changing presentation modes.
+
+### Day-to-day performance improvements
+
+Folder updates are now much more targeted. When Wayfinder already knows which files changed, it updates those rows directly rather than refreshing the entire folder. Renames, moves, deletes, downloads, property edits, and filesystem notifications can all take this incremental path. Returning to a retained tab can also reuse its authoritative listing and replay filesystem changes instead of automatically enumerating the folder again.
+
+Large file operations now behave as a single transaction. Multi-item drops and Shelf transfers share one plan, progress lifecycle, refresh, rollback, and undo action. Destination checks happen away from the main thread, repeated validation is reused during a drag, and a destination that appears after planning is never silently replaced.
+
+The persistence and observation layers have been narrowed so unrelated changes no longer redraw every open surface. File-property selections use incremental indexed database updates, while Sidebar, metadata, persistence, and per-folder state notify only the parts of the app that depend on them.
+
+Resizing has received the same treatment. Sidebar transitions and split-divider drags update the geometry that is actually visible without repeatedly rebuilding hidden tabs or unchanged file surfaces. Sidebar width is owned by the native split host, Space paging follows explicit transitions, and final layout and focus state settle once when the interaction ends.
+
+Column Browser and Inspector scrolling now share one native horizontal gesture owner, preventing nested scrollers from competing with each other. Large drags limit expensive custom preview work, file tables avoid redundant row updates, and shared hover tracking significantly reduces repeated window-notification work.
+
+Image operations are faster and more reliable as well. Pixel reflection and alpha processing now use Accelerate, while WebP conversion uses a threaded low-latency encoding path suited to interactive work.
+
+### Reliability and polish
+
+This release fixes a wide range of cases where navigation or selection could be lost, restored to a stale row, or applied to the wrong folder after a rename, move, paste, delete, undo, or filesystem refresh. Folder moves now carry Wayfinder metadata with them, including file views, pins, properties, relationships, related URLs, recents, Shelf items, tabs, and nicknames.
+
+Cloud downloads no longer report completion before materialization has actually finished, remain stuck in a downloading state after completion, or lose progress when the same item appears in more than one view. Older background loads can no longer replace newer folder contents or cancel work owned by the current presentation.
+
+Sidebar resizing and Space paging have been stabilized so resizing no longer changes the active Space or leaves glass and hover presentation in an incorrect state. Split panes and tabs are more resilient during rapid interaction, with fixes for blank reveals, late layout jumps, stale animation completions, unstable reordering, and tab drops.
+
+Column Browser previews now fit inside the true horizontal scroll extent, remain above neighbouring pane chrome, and preserve vertical Inspector scrolling while forwarding horizontal gestures to the outer column track.
+
+File-operation failures now roll back completed steps coherently, keep undo history together, and avoid refreshing once per item. Image conversion fixes cover transparency, EXIF orientation, JPEG white backgrounds, WebP alpha, cancellation, and partially written outputs. Default-folder-viewer changes are also safer: Launch Services failures leave existing bindings intact, do not overwrite a newer choice made outside Wayfinder, and provide actionable recovery guidance.
+]]></description>
+            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder-0.4.1.dmg" length="11349263" type="application/octet-stream" sparkle:edSignature="qJQvkPh5av1tDUagdR6tmzSicgORxDr4a4GrAr2p5zNppai03R9BQrG0qiNcEtmSeZhIRBGOdkEAx7UtrY7CCw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder5-4.delta" sparkle:deltaFrom="4" length="1808738" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="xKNgwipzQRrKCm9o0/7qFl7NwMjnZ+AO32ITKcEo1qarjxRCckaWVWCOU2Ez8yAPBN8hyLpvsVLNrdcOFxmcCQ=="/>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder5-3.delta" sparkle:deltaFrom="3" length="4590838" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="2G2Y3sASivIpxRQlvuvkJ3KqgM31gkf99zzlk/PjebtGT7k304khidJeAnlP9b2b8urjV1vpjUx6GLmBpF32Dw=="/>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder5-2.delta" sparkle:deltaFrom="2" length="5356282" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="+65bRccN0kpY50R4guoWNrG+W6T+KF4QkxX87hEVAMWNHga+e4G6tyHQvC80ITqPMUYQ57Aj+CUyfehVFRJKBQ=="/>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder5-1.delta" sparkle:deltaFrom="1" length="5854670" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="bvx7MP3DR2yOVRW9S8qNwgkPP6sxfVR8IC06P4HXAvv7yRkzOP86USjK5LGqXGuVooy0aPUoQrBR2VP5mNs+BQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.4.0</title>
             <pubDate>Fri, 14 Aug 2026 17:42:40 +0300</pubDate>
             <sparkle:version>4</sparkle:version>
@@ -75,11 +160,11 @@ Sidebar resizing and Space paging have been stabilized so resizing no longer cha
 Column Browser previews now fit inside the true horizontal scroll extent, remain above neighbouring pane chrome, and preserve vertical Inspector scrolling while forwarding horizontal gestures to the outer column track.
 
 File-operation failures now roll back completed steps coherently, keep undo history together, and avoid refreshing once per item. Image conversion fixes cover transparency, EXIF orientation, JPEG white backgrounds, WebP alpha, cancellation, and partially written outputs. Default-folder-viewer changes are also safer: Launch Services failures leave existing bindings intact, do not overwrite a newer choice made outside Wayfinder, and provide actionable recovery guidance.]]></description>
-            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.0/Wayfinder-0.4.0.dmg" length="11314313" type="application/octet-stream" sparkle:edSignature="vIfArsYC0OaOVJu1LjzweqifoxDo0OfzNhk0OWeGomAXlF1Op6aoNPuRC2IPHA97LpLFNo7fbFEZNVSrVvIODg=="/>
+            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder-0.4.0.dmg" length="11314313" type="application/octet-stream" sparkle:edSignature="vIfArsYC0OaOVJu1LjzweqifoxDo0OfzNhk0OWeGomAXlF1Op6aoNPuRC2IPHA97LpLFNo7fbFEZNVSrVvIODg=="/>
             <sparkle:deltas>
-                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.0/Wayfinder4-3.delta" sparkle:deltaFrom="3" length="4335866" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="DRJ6oEXgnc/hnW6tGkm49MAkqrqzEwnOdrjv/79tbXO1es/ndA0HAxStdX00eOP0oaKgS9VadpmW8rmYNSq3CA=="/>
-                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.0/Wayfinder4-2.delta" sparkle:deltaFrom="2" length="5148990" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="0Yc6YP7sq4l5+/oNBWQ3yIbho8ZArNpJk8Vio16/QevA1laOKtqpUeXjUi6O9EcTLz7S1rvQ8OaWjE3X+fVADw=="/>
-                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.0/Wayfinder4-1.delta" sparkle:deltaFrom="1" length="5678618" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="5ABCkJ/xt4fH28ImNkKxyPwb5xREGL37Zc6EEnqmigOAxoRsfV6uVgV3zPh92j4KRoPjIc5ClTvbI6yR2CFVBg=="/>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder4-3.delta" sparkle:deltaFrom="3" length="4335866" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="DRJ6oEXgnc/hnW6tGkm49MAkqrqzEwnOdrjv/79tbXO1es/ndA0HAxStdX00eOP0oaKgS9VadpmW8rmYNSq3CA=="/>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder4-2.delta" sparkle:deltaFrom="2" length="5148990" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="0Yc6YP7sq4l5+/oNBWQ3yIbho8ZArNpJk8Vio16/QevA1laOKtqpUeXjUi6O9EcTLz7S1rvQ8OaWjE3X+fVADw=="/>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder4-1.delta" sparkle:deltaFrom="1" length="5678618" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="5ABCkJ/xt4fH28ImNkKxyPwb5xREGL37Zc6EEnqmigOAxoRsfV6uVgV3zPh92j4KRoPjIc5ClTvbI6yR2CFVBg=="/>
             </sparkle:deltas>
         </item>
         <item>
@@ -131,7 +216,7 @@ This release makes folders more personal and useful with folder-specific pins, p
 - Improved tab and pane presentation, including clearer active-pane styling and more reliable switching between previously opened tabs.
 - Refined popovers, row actions, pinned indicators, dividers, spacing, and selection animations across the app.
 ]]></description>
-            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.0/Wayfinder-0.3.0.dmg" length="10375287" type="application/octet-stream" sparkle:edSignature="Umps/arkQkMU950kdlzPqdSvCfgW8nKpXGSYqw7yAnNnQuM2qnCKhnOn70shPoqYB2aQjtNq0zsZeJNzc4iWBg=="/>
+            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder-0.3.0.dmg" length="10375287" type="application/octet-stream" sparkle:edSignature="Umps/arkQkMU950kdlzPqdSvCfgW8nKpXGSYqw7yAnNnQuM2qnCKhnOn70shPoqYB2aQjtNq0zsZeJNzc4iWBg=="/>
             <sparkle:deltas>
                 <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.3.0/Wayfinder3-2.delta" sparkle:deltaFrom="2" length="2573886" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Z9xeVCNTYAoGS+g2OhP2DNFeVnRq+l+gp4PCSvPI3zaUp6uNH1vMLkp0giG9vp5+AJ2KGyE4A9v0IBaQa0vTAA=="/>
                 <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.3.0/Wayfinder3-1.delta" sparkle:deltaFrom="1" length="3350258" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="d0QXUamV9va1+32CeaEuZo+bWfqAMzYpzOb81oHGL2J7v5ZYK1e/kUKiiRE/ofL/LNWAV5UhC8EDPYSaPHZICQ=="/>
@@ -195,7 +280,7 @@ The release adds independent tabs in every pane, recursive splits, direct manipu
 - Double-clicking the titlebar now respects the macOS preference to minimize, zoom, or take no action.
 - WebP conversion now matches `cwebp`'s default encoding behavior more closely.
 ]]></description>
-            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.0/Wayfinder-0.2.0.dmg" length="9740240" type="application/octet-stream" sparkle:edSignature="Vmzs+cZLumCI2BDmAg52GkaoaGJRFiSpZ7iUpmCe1VBwg9OhCSA+oWSN4oGUZC6nSrbrmoT9wnKcIDI1yq7zAg=="/>
+            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder-0.2.0.dmg" length="9740240" type="application/octet-stream" sparkle:edSignature="Vmzs+cZLumCI2BDmAg52GkaoaGJRFiSpZ7iUpmCe1VBwg9OhCSA+oWSN4oGUZC6nSrbrmoT9wnKcIDI1yq7zAg=="/>
             <sparkle:deltas>
                 <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.2.0/Wayfinder2-1.delta" sparkle:deltaFrom="1" length="2256914" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="tfEFSzi3OunFbLNPxJx0Ld683jp0Rylfs2/rkX5C7LF4E5N5bFOm8J6bE36eMHrE9rfjBoTgoDHZ02kgB/nUCQ=="/>
             </sparkle:deltas>
