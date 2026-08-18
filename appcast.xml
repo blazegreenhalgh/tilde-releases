@@ -3,6 +3,72 @@
     <channel>
         <title>Wayfinder</title>
         <item>
+            <title>0.4.2</title>
+            <pubDate>Tue, 18 Aug 2026 16:14:58 +0300</pubDate>
+            <sparkle:version>6</sparkle:version>
+            <sparkle:shortVersionString>0.4.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Tilde 0.4.2
+
+Wayfinder is now Tilde. This release adds a Home page for every Space, a Welcome tour that teaches the app by using it, folder-specific properties you can optionally share, and snappier day-to-day browsing.
+
+## Home
+
+Each Space now has its own Home page — a starting point for the work that belongs there.
+
+- Pin folders and links for one-click access.
+- Pin live folder views as cards, each with its own sorting, grouping, and filters.
+- Widen a view when you need more room, or keep several side by side.
+
+Click the house in the sidebar any time you want to go back.
+
+## Learn Tilde
+
+Welcome is a short, hands-on tour of what makes Tilde different. Lessons use a playground folder, so you can try things without touching the rest of your files.
+
+- Command Palette, Properties, Live Groups, Spaces, Split Views, and Pinned Folders.
+- Short videos plus guided walkthroughs that point at the real controls.
+- Progress is saved, so you can pick up where you left off.
+- A book icon in the sidebar opens Welcome. Hide it in Appearance settings when you no longer need it.
+
+## Folder-specific properties
+
+Properties now belong to the folder where you create them, instead of applying everywhere by default.
+
+- A new property stays local to that folder until you choose to share it.
+- **Add Existing Property** reuses a field from another folder when you do want the same one in both places.
+- While a property is shared, changing its name or options updates every folder that uses it. Tilde shows how many folders that is.
+- **Make Independent for This Folder** if one folder needs its own version.
+- Remove a property from a folder without deleting it from the others.
+
+## Faster browsing
+
+Everyday navigation does less waiting and less flashing.
+
+- Open With menus no longer freeze before loading.
+- Folder lists update in place when files appear, move, or disappear.
+
+## Fixes and polish
+
+- **Command-F** still searches the folder you are looking at after you click into a split pane.
+- **New Folder with Selection** opens the folder it just created. Undo takes you back to the parent.
+- **Copy Path** copies the folder currently shown, not a parent further up the trail.
+- Nicknames now show correctly in the sidebar.
+- Dropping a folder onto the sidebar pins it immediately.
+- Drag the space dots in the sidebar to reorder Spaces.
+- Appearance settings now include **Hide Recents**, if you want a quieter sidebar.
+]]></description>
+            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.2/Tilde-0.4.2.dmg" length="19509343" type="application/octet-stream" sparkle:edSignature="0T/jB0kanbbmCxWldcto9bCb8BpeCTcllKIHYvwiAAgQCXV0+tToKHVVDh7zgw4tcIS79r9IebHubeRSWtIuAQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.2/Tilde6-5.delta" sparkle:deltaFrom="5" length="11698262" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="CN0UThc1izjPCst7OAyqdd0gdmdtguR/fkJP4w3IZ1Y0Lyy86/dliTtt5rPJsqHzwjiQox8S2bijYeB5JCIqAA=="/>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.2/Tilde6-4.delta" sparkle:deltaFrom="4" length="11700290" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="rApzsQxzdqCtdHa8zsLV0gSAn72KGI7+t6n4SLm6ge3MDelxO4vx7miE8TjTUc85mEm2MSQ+GxF2hmFLj8k9Bw=="/>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.2/Tilde6-3.delta" sparkle:deltaFrom="3" length="12676190" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="8bJz40niINuWTE0Bbt5/qMx/m96r/+auAUvbxbPqZIJZR/+nF2+//ffrJP0swMGdVLHhbbQpLx2UfaJjvCjOCw=="/>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.2/Tilde6-2.delta" sparkle:deltaFrom="2" length="12909906" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="gP8pEI17JoYLYfYaOR7xNUUmNkWfoPyI5levSXZQoW+GtD/ySnYp8Bn1lHxt2Goys/VqJ9l+zWJIX69f8ycfAg=="/>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.2/Tilde6-1.delta" sparkle:deltaFrom="1" length="12914246" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="QY8JAtn4AmVq48CYstwjNWwQFyUUfSTsKyjNf8RMM2hvf36Zr25iERNIeFrko7MfoVjQxTk2dhgrwAID2rVeDQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.4.1</title>
             <pubDate>Fri, 14 Aug 2026 23:22:17 +0300</pubDate>
             <sparkle:version>5</sparkle:version>
@@ -79,7 +145,7 @@ Column Browser previews now fit inside the true horizontal scroll extent, remain
 
 File-operation failures now roll back completed steps coherently, keep undo history together, and avoid refreshing once per item. Image conversion fixes cover transparency, EXIF orientation, JPEG white backgrounds, WebP alpha, cancellation, and partially written outputs. Default-folder-viewer changes are also safer: Launch Services failures leave existing bindings intact, do not overwrite a newer choice made outside Wayfinder, and provide actionable recovery guidance.
 ]]></description>
-            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder-0.4.1.dmg" length="11349263" type="application/octet-stream" sparkle:edSignature="qJQvkPh5av1tDUagdR6tmzSicgORxDr4a4GrAr2p5zNppai03R9BQrG0qiNcEtmSeZhIRBGOdkEAx7UtrY7CCw=="/>
+            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.2/Wayfinder-0.4.1.dmg" length="11349263" type="application/octet-stream" sparkle:edSignature="qJQvkPh5av1tDUagdR6tmzSicgORxDr4a4GrAr2p5zNppai03R9BQrG0qiNcEtmSeZhIRBGOdkEAx7UtrY7CCw=="/>
             <sparkle:deltas>
                 <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder5-4.delta" sparkle:deltaFrom="4" length="1808738" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="xKNgwipzQRrKCm9o0/7qFl7NwMjnZ+AO32ITKcEo1qarjxRCckaWVWCOU2Ez8yAPBN8hyLpvsVLNrdcOFxmcCQ=="/>
                 <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder5-3.delta" sparkle:deltaFrom="3" length="4590838" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="2G2Y3sASivIpxRQlvuvkJ3KqgM31gkf99zzlk/PjebtGT7k304khidJeAnlP9b2b8urjV1vpjUx6GLmBpF32Dw=="/>
@@ -160,11 +226,11 @@ Sidebar resizing and Space paging have been stabilized so resizing no longer cha
 Column Browser previews now fit inside the true horizontal scroll extent, remain above neighbouring pane chrome, and preserve vertical Inspector scrolling while forwarding horizontal gestures to the outer column track.
 
 File-operation failures now roll back completed steps coherently, keep undo history together, and avoid refreshing once per item. Image conversion fixes cover transparency, EXIF orientation, JPEG white backgrounds, WebP alpha, cancellation, and partially written outputs. Default-folder-viewer changes are also safer: Launch Services failures leave existing bindings intact, do not overwrite a newer choice made outside Wayfinder, and provide actionable recovery guidance.]]></description>
-            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder-0.4.0.dmg" length="11314313" type="application/octet-stream" sparkle:edSignature="vIfArsYC0OaOVJu1LjzweqifoxDo0OfzNhk0OWeGomAXlF1Op6aoNPuRC2IPHA97LpLFNo7fbFEZNVSrVvIODg=="/>
+            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.2/Wayfinder-0.4.0.dmg" length="11314313" type="application/octet-stream" sparkle:edSignature="vIfArsYC0OaOVJu1LjzweqifoxDo0OfzNhk0OWeGomAXlF1Op6aoNPuRC2IPHA97LpLFNo7fbFEZNVSrVvIODg=="/>
             <sparkle:deltas>
-                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder4-3.delta" sparkle:deltaFrom="3" length="4335866" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="DRJ6oEXgnc/hnW6tGkm49MAkqrqzEwnOdrjv/79tbXO1es/ndA0HAxStdX00eOP0oaKgS9VadpmW8rmYNSq3CA=="/>
-                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder4-2.delta" sparkle:deltaFrom="2" length="5148990" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="0Yc6YP7sq4l5+/oNBWQ3yIbho8ZArNpJk8Vio16/QevA1laOKtqpUeXjUi6O9EcTLz7S1rvQ8OaWjE3X+fVADw=="/>
-                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder4-1.delta" sparkle:deltaFrom="1" length="5678618" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="5ABCkJ/xt4fH28ImNkKxyPwb5xREGL37Zc6EEnqmigOAxoRsfV6uVgV3zPh92j4KRoPjIc5ClTvbI6yR2CFVBg=="/>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.2/Wayfinder4-3.delta" sparkle:deltaFrom="3" length="4335866" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="DRJ6oEXgnc/hnW6tGkm49MAkqrqzEwnOdrjv/79tbXO1es/ndA0HAxStdX00eOP0oaKgS9VadpmW8rmYNSq3CA=="/>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.2/Wayfinder4-2.delta" sparkle:deltaFrom="2" length="5148990" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="0Yc6YP7sq4l5+/oNBWQ3yIbho8ZArNpJk8Vio16/QevA1laOKtqpUeXjUi6O9EcTLz7S1rvQ8OaWjE3X+fVADw=="/>
+                <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.2/Wayfinder4-1.delta" sparkle:deltaFrom="1" length="5678618" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="5ABCkJ/xt4fH28ImNkKxyPwb5xREGL37Zc6EEnqmigOAxoRsfV6uVgV3zPh92j4KRoPjIc5ClTvbI6yR2CFVBg=="/>
             </sparkle:deltas>
         </item>
         <item>
@@ -216,7 +282,7 @@ This release makes folders more personal and useful with folder-specific pins, p
 - Improved tab and pane presentation, including clearer active-pane styling and more reliable switching between previously opened tabs.
 - Refined popovers, row actions, pinned indicators, dividers, spacing, and selection animations across the app.
 ]]></description>
-            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder-0.3.0.dmg" length="10375287" type="application/octet-stream" sparkle:edSignature="Umps/arkQkMU950kdlzPqdSvCfgW8nKpXGSYqw7yAnNnQuM2qnCKhnOn70shPoqYB2aQjtNq0zsZeJNzc4iWBg=="/>
+            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.2/Wayfinder-0.3.0.dmg" length="10375287" type="application/octet-stream" sparkle:edSignature="Umps/arkQkMU950kdlzPqdSvCfgW8nKpXGSYqw7yAnNnQuM2qnCKhnOn70shPoqYB2aQjtNq0zsZeJNzc4iWBg=="/>
             <sparkle:deltas>
                 <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.3.0/Wayfinder3-2.delta" sparkle:deltaFrom="2" length="2573886" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Z9xeVCNTYAoGS+g2OhP2DNFeVnRq+l+gp4PCSvPI3zaUp6uNH1vMLkp0giG9vp5+AJ2KGyE4A9v0IBaQa0vTAA=="/>
                 <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.3.0/Wayfinder3-1.delta" sparkle:deltaFrom="1" length="3350258" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="d0QXUamV9va1+32CeaEuZo+bWfqAMzYpzOb81oHGL2J7v5ZYK1e/kUKiiRE/ofL/LNWAV5UhC8EDPYSaPHZICQ=="/>
@@ -280,7 +346,7 @@ The release adds independent tabs in every pane, recursive splits, direct manipu
 - Double-clicking the titlebar now respects the macOS preference to minimize, zoom, or take no action.
 - WebP conversion now matches `cwebp`'s default encoding behavior more closely.
 ]]></description>
-            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.1/Wayfinder-0.2.0.dmg" length="9740240" type="application/octet-stream" sparkle:edSignature="Vmzs+cZLumCI2BDmAg52GkaoaGJRFiSpZ7iUpmCe1VBwg9OhCSA+oWSN4oGUZC6nSrbrmoT9wnKcIDI1yq7zAg=="/>
+            <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.4.2/Wayfinder-0.2.0.dmg" length="9740240" type="application/octet-stream" sparkle:edSignature="Vmzs+cZLumCI2BDmAg52GkaoaGJRFiSpZ7iUpmCe1VBwg9OhCSA+oWSN4oGUZC6nSrbrmoT9wnKcIDI1yq7zAg=="/>
             <sparkle:deltas>
                 <enclosure url="https://github.com/blazegreenhalgh/wayfinder-releases/releases/download/v0.2.0/Wayfinder2-1.delta" sparkle:deltaFrom="1" length="2256914" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="tfEFSzi3OunFbLNPxJx0Ld683jp0Rylfs2/rkX5C7LF4E5N5bFOm8J6bE36eMHrE9rfjBoTgoDHZ02kgB/nUCQ=="/>
             </sparkle:deltas>
